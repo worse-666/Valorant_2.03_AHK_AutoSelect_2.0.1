@@ -1,12 +1,12 @@
 # Valorant-AHK-AutoLock
-AUTOLOCK
-=
 
-Resolution : 1920*1080
-Text Language : English
-Agent : 14
 
-How to use :
-F5 : select agent on the menu
-F6 : pause autolock
-F7 : exit scrip
+support <br>
+Resolution : 1920*1080 <br>
+Text Language : English <br>
+Agent : 14 <br>
+
+How to use : <br>
+F5 : select agent on the menu <br>
+F6 : pause autolock <br>
+F7 : exit scrip <br>
