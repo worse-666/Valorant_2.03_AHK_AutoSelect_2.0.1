@@ -1,4 +1,7 @@
 # Valorant-AHK-AutoLock
+AUTOLOCK
+=
+
 Resolution : 1920*1080
 Text Language : English
 Agent : 14
