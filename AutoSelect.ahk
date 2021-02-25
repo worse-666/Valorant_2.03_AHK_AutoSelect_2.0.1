@@ -128,7 +128,7 @@ while TRUE {
 				} else {
 
 					CoordMode Pixel
-					PixelSearch, __FoundX, __FoundY, 46, 91, 46, 91, 0x94AEE3,,Fast RGB
+					PixelSearch, __FoundX, __FoundY, 1, 100, 1, 100, 0x7095E1,3,Fast RGB
 					CoordMode Mouse
 					if (ErrorLevel=0) {	
 						
@@ -150,4 +150,3 @@ while TRUE {
 		}	
 	
 }
-
