@@ -8,5 +8,5 @@ Agent : 14 <br>
 
 ## How to use  <br>
 F5 : select agent on the menu <br>
-F6 : pause autolock <br>
+F6 : pause autoselect <br>
 F7 : exit scrip <br>
