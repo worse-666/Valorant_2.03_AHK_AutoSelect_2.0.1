@@ -1,6 +1,15 @@
 CoordMode, Mouse , Screen
 
 
+SysGet, resolution, Monitor, 1
+
+if not (resolutionRight = 1920 and resolutionBottom = 1080) {
+
+    MsgBox, Your resolution is not 1920*1080 `n This script may not work
+
+}
+
+
 agent_xy(x){
 
 	global
