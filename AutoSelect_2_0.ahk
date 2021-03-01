@@ -88,9 +88,19 @@ select() {
     PixelSearch, __FoundX, __FoundY, 28, 28, 28, 28, 0xFFFFFF,,Fast RGB
     CoordMode Mouse
     if (ErrorLevel=0) {
+
+        CoordMode Pixel
+        PixelSearch, __FoundX, __FoundY, 1897, 25, 1897, 25, 0xFFFFFF,,Fast RGB
+        CoordMode Mouse
+        if (ErrorLevel=0) {
+
+            agent_xy(x := None)
+
+        }
+
     } else {
 
-       CoordMode Pixel
+        CoordMode Pixel
         PixelSearch, __FoundX, __FoundY, 1897, 25, 1897, 25, 0xFFFFFF,,Fast RGB
         CoordMode Mouse
         if (ErrorLevel=0) {     
@@ -99,7 +109,7 @@ select() {
             CoordMode Pixel
             PixelSearch, __FoundX, __FoundY, 1, 100, 1, 100, 0x7095E1,3,Fast RGB
             CoordMode Mouse
-           if (ErrorLevel=0 and not agent_x = 959 and not agent_y = 816 ) { 
+            if (ErrorLevel=0 and not agent_x = 959 and not agent_y = 816 ) { 
               
                 Loop 4
                 {
@@ -298,68 +308,79 @@ global DIcebox
 global DHaven
 global SSS
 
+global sgui := -1
+
 
 while TRUE {
 
 	if GetKeyState("F5") {
-        GuiControl, Disable, Set All
-        GuiControl, Disable, Cancel
-        GuiControl, Disable, EXIT
-        GuiControl, Disable, OK
-        GuiControl, Disable, DAscent
-        GuiControl, Disable, DSplit
-        GuiControl, Disable, DBind
-        GuiControl, Disable, DIcebox
-        GuiControl, Disable, DHaven
+        sgui := sgui * -1
+        if (sgui = 1) {
+            GuiControl, Disable, Set All
+            GuiControl, Disable, Cancel
+            GuiControl, Disable, EXIT
+            GuiControl, Disable, OK
+            GuiControl, Disable, DAscent
+            GuiControl, Disable, DSplit
+            GuiControl, Disable, DBind
+            GuiControl, Disable, DIcebox
+            GuiControl, Disable, DHaven
 
-	Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
-        global Ty    := -20
-        global DSx   := 14
-        global DBx   := 14
-        global DIx   := 14
-        global DHx   := 14
-        global Tacex := -500
-        global Tbdfx := 520
+    		Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
+            global Ty    := -20
+            global DSx   := 14
+            global DBx   := 14
+            global DIx   := 14
+            global DHx   := 14
+            global Tacex := -500
+            global Tbdfx := 520
 
-        Loop 20 {
-            Gui, Font, s8 c005C5C,
+            Loop 20 {
+                Gui, Font, s8 c005C5C,
 
-            GuiControl, Move, Ascent, % "y" Ty
-            GuiControl, Move, Split , % "y" Ty
-            GuiControl, Move, Bind  , % "y" Ty
-            GuiControl, Move, Icebox, % "y" Ty
-            GuiControl, Move, Haven , % "y" Ty
-            Ty  := (12 - Ty)/4 + Ty 
+                GuiControl, Move, Ascent, % "y" Ty
+                GuiControl, Move, Split , % "y" Ty
+                GuiControl, Move, Bind  , % "y" Ty
+                GuiControl, Move, Icebox, % "y" Ty
+                GuiControl, Move, Haven , % "y" Ty
+                Ty  := (12 - Ty)/4 + Ty 
 
-            GuiControl, Move, DSplit , % "x" DSx
-            GuiControl, Move, DBind  , % "x" DBx
-            GuiControl, Move, DIcebox, % "x" DIx
-            GuiControl, Move, DHaven , % "x" DHx
-            DSx := (117 - DSx)/4.5 + DSx
-            DBx := (222 - DBx)/4.5 + DBx
-            DIx := (325 - DIx)/4.5 + DIx
-            DHx := (428 - DHx)/4.5 + DHx
+                GuiControl, Move, DSplit , % "x" DSx
+                GuiControl, Move, DBind  , % "x" DBx
+                GuiControl, Move, DIcebox, % "x" DIx
+                GuiControl, Move, DHaven , % "x" DHx
+                DSx := (117 - DSx)/4.5 + DSx
+                DBx := (222 - DBx)/4.5 + DBx
+                DIx := (325 - DIx)/4.5 + DIx
+                DHx := (428 - DHx)/4.5 + DHx
 
-            GuiControl, Move, Ta , % "x" Tacex
-            GuiControl, Move, Tc , % "x" Tacex
-            GuiControl, Move, Te , % "x" Tacex
-            GuiControl, Move, Tb , % "x" Tbdfx
-            GuiControl, Move, Td , % "x" Tbdfx
-            GuiControl, Move, Tf , % "x" Tbdfx
-            Tacex := (20 - Tacex)/4.5 + Tacex
-            Tbdfx := (11 - Tbdfx)/4.5 + Tbdfx
+                GuiControl, Move, Ta , % "x" Tacex
+                GuiControl, Move, Tc , % "x" Tacex
+                GuiControl, Move, Te , % "x" Tacex
+                GuiControl, Move, Tb , % "x" Tbdfx
+                GuiControl, Move, Td , % "x" Tbdfx
+                GuiControl, Move, Tf , % "x" Tbdfx
+                Tacex := (20 - Tacex)/4.5 + Tacex
+                Tbdfx := (11 - Tbdfx)/4.5 + Tbdfx
 
-            Sleep % 4
+                Sleep % 4
+            }
+            GuiControl, Enable, Set All
+            GuiControl, Enable, EXIT
+            GuiControl, Enable, Cancel
+            GuiControl, Enable, OK
+            GuiControl, Enable, DAscent
+            GuiControl, Enable, DSplit
+            GuiControl, Enable, DBind
+            GuiControl, Enable, DIcebox
+            GuiControl, Enable, DHaven
+
+        }else{
+
+            Gui, Hide
+
         }
-        GuiControl, Enable, Set All
-        GuiControl, Enable, EXIT
-        GuiControl, Enable, Cancel
-        GuiControl, Enable, OK
-        GuiControl, Enable, DAscent
-        GuiControl, Enable, DSplit
-        GuiControl, Enable, DBind
-        GuiControl, Enable, DIcebox
-        GuiControl, Enable, DHaven
+        KeyWait, F5
 	}
 	;if GetKeyState("F6") {
 	;	start := 0
