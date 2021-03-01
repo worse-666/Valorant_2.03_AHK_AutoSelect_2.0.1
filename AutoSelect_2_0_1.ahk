@@ -116,9 +116,11 @@ select() {
                     MouseMove %agent_x%, %agent_y%, 0
                     Send {LButton DOWN}
                     Send {LButton UP}
-                    MouseMove 959 , 816, 0
-                    Send {LButton DOWN}
-                    Send {LButton UP}
+                    if (LLL = 0){
+                        MouseMove 959 , 816, 0
+                        Send {LButton DOWN}
+                        Send {LButton UP}
+                    }
                 }
                     
             } else {
@@ -269,6 +271,7 @@ Gui, Add, Text, x+58     , Split
 Gui, Add, Text, x+68     , Bind
 Gui, Add, Text, x+61     , Icebox
 Gui, Add, Text, x+53     , Haven 
+Gui, Add, Text, x30  y-20,  ALL
 Gui, Font, s11 caqua 
 Gui, Add, DropDownList, x14  y45 w85 R15 vDAscent gOnselect, None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
 Gui, Add, DropDownList, x117 y45 w85 R15 vDSplit           , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
@@ -292,7 +295,8 @@ Gui, Add, Button, -default x15  y305 w80 h28, EXIT
 Gui, Add, Button, -default x325  y305 w80 h28, Cancel
 Gui, Add, Button, +default x425  y305 w80 h28, OK
 Gui, Font, s10 cDDDDDD
-Gui, Add, CheckBox, x20 y80 vSSS gOOO, Set All
+Gui, Add, CheckBox, x20 y80  vSSS gSetbox , Set  All
+Gui, Add, CheckBox, x20 y105 vLLL gLockbox, Don't  LOCK🔒
 Gui, Font, s9 c50B050
 Gui, Add, Text, x110 y322 , Ver.2.0.1
 
@@ -307,6 +311,7 @@ global DBind
 global DIcebox
 global DHaven
 global SSS
+global LLL
 
 global sgui := -1
 
@@ -316,7 +321,8 @@ while TRUE {
 	if GetKeyState("F5") {
         sgui := sgui * -1
         if (sgui = 1) {
-            GuiControl, Disable, Set All
+            GuiControl, Disable, Set  All
+            GuiControl, Disable, Don't  LOCK
             GuiControl, Disable, Cancel
             GuiControl, Disable, EXIT
             GuiControl, Disable, OK
@@ -327,6 +333,7 @@ while TRUE {
             GuiControl, Disable, DHaven
 
     		Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
+            global Tya   := -20
             global Ty    := -20
             global DSx   := 14
             global DBx   := 14
@@ -336,7 +343,6 @@ while TRUE {
             global Tbdfx := 520
 
             Loop 20 {
-                Gui, Font, s8 c005C5C,
 
                 GuiControl, Move, Ascent, % "y" Ty
                 GuiControl, Move, Split , % "y" Ty
@@ -365,7 +371,8 @@ while TRUE {
 
                 Sleep % 4
             }
-            GuiControl, Enable, Set All
+            GuiControl, Enable, Set  All
+            GuiControl, Enable, Don't  LOCK
             GuiControl, Enable, EXIT
             GuiControl, Enable, Cancel
             GuiControl, Enable, OK
@@ -395,26 +402,65 @@ while TRUE {
 }
 
 
-OOO:
+Setbox:
+GuiControl, Disable, Set  All
+GuiControl, Disable, Don't  LOCK
+GuiControl, Disable, Cancel
+GuiControl, Disable, EXIT
+GuiControl, Disable, OK
+GuiControl, Disable, DAscent
+GuiControl, Disable, DSplit
+GuiControl, Disable, DBind
+GuiControl, Disable, DIcebox
+GuiControl, Disable, DHaven
 Gui, Submit, NoHide
 if(SSS = 1){
-    Gui, Submit, NoHide
-    GuiControl, Disable, DSplit
-    GuiControl, Disable, DBind
-    GuiControl, Disable, DIcebox
-    GuiControl, Disable, DHaven
     GuiControl, Choose, DSplit , %DAscent%
     GuiControl, Choose, DBind  , %DAscent%
     GuiControl, Choose, DIcebox, %DAscent%
     GuiControl, Choose, DHaven , %DAscent%
+    GuiControl, Move, Ascent, y-20
+    GuiControl, Move, Split , y-20
+    GuiControl, Move, Bind  , y-20
+    GuiControl, Move, Icebox, y-20
+    GuiControl, Move, Haven , y-20
+    Tya = -20
+    Loop 20 {
+        GuiControl, Move, ALL , % "y" Tya
+        Tya  := (12 - Tya)/4 + Tya
+        Sleep % 4
+    }
 }else{
+    GuiControl, Move, ALL , y-20
+    Ty = -20
+    Loop 20 {
+        GuiControl, Move, Ascent, % "y" Ty
+        GuiControl, Move, Split , % "y" Ty
+        GuiControl, Move, Bind  , % "y" Ty
+        GuiControl, Move, Icebox, % "y" Ty
+        GuiControl, Move, Haven , % "y" Ty
+        Ty  := (12 - Ty)/4 + Ty
+        Sleep % 4
+    }
     GuiControl, Enable, DSplit
     GuiControl, Enable, DBind
     GuiControl, Enable, DIcebox
     GuiControl, Enable, DHaven
 }
+GuiControl, Enable, Set  All
+GuiControl, Enable, Don't  LOCK
+GuiControl, Enable, EXIT
+GuiControl, Enable, Cancel
+GuiControl, Enable, OK
+GuiControl, Enable, DAscent
 Return
 
+
+Lockbox:
+GuiControl, Disable, Don't  LOCK
+Gui, Submit, NoHide
+Sleep % 15
+GuiControl, Enable, Don't  LOCK
 
 Onselect:
 Gui, Submit, NoHide
@@ -427,17 +473,14 @@ if(SSS = 1){
 }
 Return
 
-
 ButtonCancel:
 Gui, Hide
 Return
-
 
 ButtonOK:
 Gui, Submit
 start := 1
 Return
-    
 
 ButtonEXIT:
 ExitApp
