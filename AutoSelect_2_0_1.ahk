@@ -294,7 +294,7 @@ Gui, Add, Button, +default x425  y305 w80 h28, OK
 Gui, Font, s10 cDDDDDD
 Gui, Add, CheckBox, x20 y80 vSSS gOOO, Set All
 Gui, Font, s9 c50B050
-Gui, Add, Text, x110 y322 , Ver.2.0
+Gui, Add, Text, x110 y322 , Ver.2.0.1
 
 Gui, +AlwaysOnTop
 Gui, Color, 101010 
