@@ -312,7 +312,7 @@ while TRUE {
         GuiControl, Disable, DIcebox
         GuiControl, Disable, DHaven
 
-		Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
+	Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
         global Ty    := -20
         global DSx   := 14
         global DBx   := 14
