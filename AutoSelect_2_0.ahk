@@ -101,7 +101,7 @@ select() {
             CoordMode Mouse
            if (ErrorLevel=0 and not agent_x = 959 and not agent_y = 816 ) { 
               
-                Loop 5
+                Loop 4
                 {
                     MouseMove %agent_x%, %agent_y%, 0
                     Send {LButton DOWN}
@@ -283,6 +283,8 @@ Gui, Add, Button, -default x325  y305 w80 h28, Cancel
 Gui, Add, Button, +default x425  y305 w80 h28, OK
 Gui, Font, s10 cDDDDDD
 Gui, Add, CheckBox, x20 y80 vSSS gOOO, Set All
+Gui, Font, s9 c50B050
+Gui, Add, Text, x110 y322 , Ver.2.0
 
 Gui, +AlwaysOnTop
 Gui, Color, 101010 
