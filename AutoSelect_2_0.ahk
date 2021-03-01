@@ -385,7 +385,7 @@ if(SSS = 1){
     GuiControl, Choose, DSplit , %DAscent%
     GuiControl, Choose, DBind  , %DAscent%
     GuiControl, Choose, DIcebox, %DAscent%
-GuiControl, Choose, DHaven , %DAscent%
+    GuiControl, Choose, DHaven , %DAscent%
 }else{
     GuiControl, Enable, DSplit
     GuiControl, Enable, DBind
