@@ -271,7 +271,7 @@ Gui, Add, Text, x+58     , Split
 Gui, Add, Text, x+68     , Bind
 Gui, Add, Text, x+61     , Icebox
 Gui, Add, Text, x+53     , Haven 
-Gui, Add, Text, x30  y-20,  ALL
+Gui, Add, Text, x40  y-20,  ALL
 Gui, Font, s11 caqua 
 Gui, Add, DropDownList, x14  y45 w85 R15 vDAscent gOnselect, None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
 Gui, Add, DropDownList, x117 y45 w85 R15 vDSplit           , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
