@@ -9,7 +9,7 @@ if not (resolutionRight = 1920 and resolutionBottom = 1080) {
 
 }else{
     
-    MsgBox, Welcome AUTO SELECT script `n ------------------------------ `n F5:Show Setting Window `n F7:Exit
+    MsgBox,Welcome AUTO SELECT script `n 😢 `n 😢 Only support all Agents are unlocked `n 😢 `n F5:Show Setting Window `n F7:Exit
 
 }
 
@@ -23,61 +23,65 @@ agent_xy(x){
         agent_x := 959
         agent_y := 816
     }
+    if (x = "Astra") {
+        agent_x := 666
+        agent_y := 925
+    }
     if (x = "Breach") {
-        agent_x := 710
-        agent_y := 927
+        agent_x := 750
+        agent_y := 925
     }
     if (x = "Brimstone") {
-        agent_x := 795
-        agent_y := 927
+        agent_x := 834
+        agent_y := 925
     }
     if (x = "Cypher") {
-        agent_x := 880
-        agent_y := 927
+        agent_x := 918
+        agent_y := 925
     }
     if (x = "Jett") {
-        agent_x := 965
-        agent_y := 927
+        agent_x := 1002
+        agent_y := 925
     }
     if (x = "Killjoy") {
-        agent_x := 1050
-        agent_y := 927
+        agent_x := 1086
+        agent_y := 925
     }
     if (x = "Omen") {
-        agent_x := 1135
-        agent_y := 927
+        agent_x := 1170
+        agent_y := 925
     }
     if (x = "Phoenix") {
-        agent_x := 1220
-        agent_y := 927
+        agent_x := 1254
+        agent_y := 925
     }
     if (x = "Raze") {
-        agent_x := 710
-        agent_y := 1010
+        agent_x := 666
+        agent_y := 1015
     }
     if (x = "Reyna") {
-        agent_x := 795
-        agent_y := 1010
+        agent_x := 750
+        agent_y := 1015
     }
     if (x = "Sage") {
-        agent_x := 880
-        agent_y := 1010
+        agent_x := 834
+        agent_y := 1015
     }
     if (x = "Skye") {
-        agent_x := 965
-        agent_y := 1010
+        agent_x := 918
+        agent_y := 1015
     }
     if (x = "Sova") {
-        agent_x := 1050
-        agent_y := 1010
+        agent_x := 1002
+        agent_y := 1015
     }
     if (x = "Viper") {
-        agent_x := 1135
-        agent_y := 1010
+        agent_x := 1086
+        agent_y := 1015
     }
     if (x = "Yoru") {
-        agent_x := 1220
-        agent_y := 1010
+        agent_x := 1170
+        agent_y := 1015
     }
 }
 
@@ -273,13 +277,13 @@ Gui, Add, Text, x+61     , Icebox
 Gui, Add, Text, x+53     , Haven 
 Gui, Add, Text, x40  y-20,  ALL
 Gui, Font, s11 caqua 
-Gui, Add, DropDownList, x14  y45 w85 R15 vDAscent gOnselect, None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
-Gui, Add, DropDownList, x117 y45 w85 R15 vDSplit           , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
-Gui, Add, DropDownList, x220 y45 w85 R15 vDBind            , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
-Gui, Add, DropDownList, x323 y45 w85 R15 vDIcebox          , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
-Gui, Add, DropDownList, x426 y45 w85 R15 vDHaven           , None|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
+Gui, Add, DropDownList, x14  y44 w85 R16 vDAscent gOnselect, None|Astra|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
+Gui, Add, DropDownList, x117 y44 w85 R16 vDSplit           , None|Astra|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
+Gui, Add, DropDownList, x220 y44 w85 R16 vDBind            , None|Astra|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
+Gui, Add, DropDownList, x323 y44 w85 R16 vDIcebox          , None|Astra|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
+Gui, Add, DropDownList, x426 y44 w85 R16 vDHaven           , None|Astra|Breach|Brimstone|Cypher|Jett|Killjoy|Omen|Phoenix|Raze|Reyna|Sage|Skye|Sova|Viper|Yoru
 Gui, Font, s8 caqua c006C6C
-Gui, Add, Text, vTa x15 y140 , ╔═══╦╗　╔╦════╦═══╗　╔═══╦═══╦╗　　╔═══╦═══╦════╗
+Gui, Add, Text, vTa x15 y150 , ╔═══╦╗　╔╦════╦═══╗　╔═══╦═══╦╗　　╔═══╦═══╦════╗
 Gui, Add, Text, vTb x15 y+0  , ║╔═╗║║　║║╔╗╔╗║╔═╗║　║╔═╗║╔══╣║　　║╔══╣╔═╗║╔╗╔╗║
 Gui, Add, Text, vTc x15 y+0  , ║║　║║║　║╠╝║║╚╣║　║║　║╚══╣╚══╣║　　║╚══╣║　╚╩╝║║╚╝
 Gui, Add, Text, vTd x15 y+0  , ║╚═╝║║　║║　║║　║║　║║　╚══╗║╔══╣║　╔╣╔══╣║　╔╗　║║
@@ -291,18 +295,18 @@ GuiControl, Choose, DBind  , None
 GuiControl, Choose, DIcebox, None
 GuiControl, Choose, DHaven , None
 Gui, Font, s11 caqua
-Gui, Add, Button, -default x15  y305 w80 h28, EXIT
-Gui, Add, Button, -default x325  y305 w80 h28, Cancel
-Gui, Add, Button, +default x425  y305 w80 h28, OK
+Gui, Add, Button, -default x15   y315 w80 h28, EXIT
+Gui, Add, Button, -default x325  y315 w80 h28, Cancel
+Gui, Add, Button, +default x425  y315 w80 h28, OK
 Gui, Font, s10 cDDDDDD
 Gui, Add, CheckBox, x20 y80  vSSS gSetbox , Set  All
 Gui, Add, CheckBox, x20 y105 vLLL gLockbox, Don't  LOCK🔒
 Gui, Font, s9 c50B050
-Gui, Add, Text, x110 y322 , Ver.2.0.1
+Gui, Add, Text, x110 y322 , Ver.2.1.0
 
 Gui, +AlwaysOnTop
 Gui, Color, 101010 
-;Gui, Show, x600 y400 w520 h340 ,Agent setting window, `t
+;Gui, Show, x600 y400 w520 h350 ,Agent setting window, `t
 
 
 global DAscent
@@ -332,7 +336,7 @@ while TRUE {
             GuiControl, Disable, DIcebox
             GuiControl, Disable, DHaven
 
-    		Gui, Show, x700 y400 w520 h340 ,Agent setting window, `t
+    		Gui, Show, x700 y400 w520 h350 ,Agent setting window, `t
             global Tya   := -20
             global Ty    := -20
             global DSx   := 14
