@@ -5,6 +5,7 @@
 Resolution : 1920*1080 <br>
 Text Language : English <br>
 Agent : 14 <br>
+*Only support all Agents are unlocked* <br>
 
 ## How to use  <br>
 F5 : show setting window <br>
