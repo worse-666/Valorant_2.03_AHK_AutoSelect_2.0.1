@@ -9,4 +9,4 @@ Agent : 14 <br>
 
 ## How to use  <br>
 F5 : show setting window <br>
-F7 : exit scrip <br>
+F7 : exit script <br>
