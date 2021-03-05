@@ -13,5 +13,5 @@ F7 : exit script <br>
 
 ## valorant setting <br>
 video : All LOW <br>
-Display Mode : Windowed Fullscreen
+Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9
