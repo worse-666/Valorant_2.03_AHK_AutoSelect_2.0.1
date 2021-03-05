@@ -10,3 +10,6 @@ Agent : 15 <br>
 ## [How to use](https://www.youtube.com/watch?v=okPJGBwlrsk&t=1s)  <br>
 F5 : show setting window <br>
 F7 : exit script <br>
+
+## valorant setting <br>
+video : All LOW
