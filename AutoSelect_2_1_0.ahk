@@ -1,3 +1,4 @@
+#SingleInstance, Force
 CoordMode, Mouse , Screen
 
 
@@ -117,7 +118,7 @@ select() {
               
                 Loop 4
                 {
-                    MouseMove %agent_x%, %agent_y%, 0
+                    MouseMove agent_x, agent_y, 0
                     Send {LButton DOWN}
                     Send {LButton UP}
                     if (LLL = 0){
