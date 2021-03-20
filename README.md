@@ -18,4 +18,4 @@ Resolution : 1920 x 1080 16:9 <br>
 
 ## Changelog <br>
 ### AutoSelect_2.1.0: <br>
-* Support Astra <>
+* Support Astra <br>
