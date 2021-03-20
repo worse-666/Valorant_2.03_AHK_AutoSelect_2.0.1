@@ -21,3 +21,5 @@ Resolution : 1920 x 1080 16:9 <br>
 * Fix small bug <br>
 ### AutoSelect_2.1.0: <br>
 * Support Astra <br>
+### AutoSelect_2.0.0: <br>
+* Individually select Agent on different maps <br>
