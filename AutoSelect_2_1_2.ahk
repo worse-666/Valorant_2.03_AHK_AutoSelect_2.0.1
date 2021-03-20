@@ -1,5 +1,10 @@
 #SingleInstance, Force
 CoordMode, Mouse , Screen
+SetKeyDelay,-1, 1
+SetControlDelay, 0
+SetMouseDelay, 0
+SetWinDelay,-1
+SetBatchLines,-1
 
 
 SysGet, resolution, Monitor, 1
@@ -126,6 +131,7 @@ select() {
                         Send {LButton DOWN}
                         Send {LButton UP}
                     }
+                    DllCall("Sleep", "UInt",5)
                 }
                     
             } else {
@@ -322,89 +328,83 @@ global sgui := -1
 
 
 while TRUE {
-
-	if GetKeyState("F5") {
-        sgui := sgui * -1
-        if (sgui = 1) {
-            GuiControl, Disable, Set  All
-            GuiControl, Disable, Don't  LOCK
-            GuiControl, Disable, Cancel
-            GuiControl, Disable, EXIT
-            GuiControl, Disable, OK
-            GuiControl, Disable, DAscent
-            GuiControl, Disable, DSplit
-            GuiControl, Disable, DBind
-            GuiControl, Disable, DIcebox
-            GuiControl, Disable, DHaven
-
-    		Gui, Show, x700 y400 w520 h350 ,Agent setting window, `t
-            global Tya   := -20
-            global Ty    := -20
-            global DSx   := 14
-            global DBx   := 14
-            global DIx   := 14
-            global DHx   := 14
-            global Tacex := -500
-            global Tbdfx := 520
-
-            Loop 20 {
-
-                GuiControl, Move, Ascent, % "y" Ty
-                GuiControl, Move, Split , % "y" Ty
-                GuiControl, Move, Bind  , % "y" Ty
-                GuiControl, Move, Icebox, % "y" Ty
-                GuiControl, Move, Haven , % "y" Ty
-                Ty  := (12 - Ty)/4 + Ty 
-
-                GuiControl, Move, DSplit , % "x" DSx
-                GuiControl, Move, DBind  , % "x" DBx
-                GuiControl, Move, DIcebox, % "x" DIx
-                GuiControl, Move, DHaven , % "x" DHx
-                DSx := (117 - DSx)/4.5 + DSx
-                DBx := (222 - DBx)/4.5 + DBx
-                DIx := (325 - DIx)/4.5 + DIx
-                DHx := (428 - DHx)/4.5 + DHx
-
-                GuiControl, Move, Ta , % "x" Tacex
-                GuiControl, Move, Tc , % "x" Tacex
-                GuiControl, Move, Te , % "x" Tacex
-                GuiControl, Move, Tb , % "x" Tbdfx
-                GuiControl, Move, Td , % "x" Tbdfx
-                GuiControl, Move, Tf , % "x" Tbdfx
-                Tacex := (20 - Tacex)/4.5 + Tacex
-                Tbdfx := (11 - Tbdfx)/4.5 + Tbdfx
-
-                Sleep % 4
-            }
-            GuiControl, Enable, Set  All
-            GuiControl, Enable, Don't  LOCK
-            GuiControl, Enable, EXIT
-            GuiControl, Enable, Cancel
-            GuiControl, Enable, OK
-            GuiControl, Enable, DAscent
-            GuiControl, Enable, DSplit
-            GuiControl, Enable, DBind
-            GuiControl, Enable, DIcebox
-            GuiControl, Enable, DHaven
-
-        }else{
-
-            Gui, Hide
-
-        }
-        KeyWait, F5
-	}
-	;if GetKeyState("F6") {
-	;	start := 0
-	;}
-	if GetKeyState("F7") {
-		ExitApp
-	}
-
 	if (start = 1) {
         select()
 	}	
 }
+
+
+F5::
+sgui := sgui * -1
+if (sgui = 1) {
+    GuiControl, Disable, Set  All
+    GuiControl, Disable, Don't  LOCK
+    GuiControl, Disable, Cancel
+    GuiControl, Disable, EXIT
+    GuiControl, Disable, OK
+    GuiControl, Disable, DAscent
+    GuiControl, Disable, DSplit
+    GuiControl, Disable, DBind
+    GuiControl, Disable, DIcebox
+    GuiControl, Disable, DHaven
+
+    Gui, Show, x700 y400 w520 h350 ,Agent setting window, `t
+    global Tya   := -20
+    global Ty    := -20
+    global DSx   := 14
+    global DBx   := 14
+    global DIx   := 14
+    global DHx   := 14
+    global Tacex := -500
+    global Tbdfx := 520
+
+    Loop 20 {
+
+        GuiControl, Move, Ascent, % "y" Ty
+        GuiControl, Move, Split , % "y" Ty
+        GuiControl, Move, Bind  , % "y" Ty
+        GuiControl, Move, Icebox, % "y" Ty
+        GuiControl, Move, Haven , % "y" Ty
+        Ty  := (12 - Ty)/4 + Ty 
+
+        GuiControl, Move, DSplit , % "x" DSx
+        GuiControl, Move, DBind  , % "x" DBx
+        GuiControl, Move, DIcebox, % "x" DIx
+        GuiControl, Move, DHaven , % "x" DHx
+        DSx := (117 - DSx)/4.5 + DSx
+        DBx := (222 - DBx)/4.5 + DBx
+        DIx := (325 - DIx)/4.5 + DIx
+        DHx := (428 - DHx)/4.5 + DHx
+
+        GuiControl, Move, Ta , % "x" Tacex
+        GuiControl, Move, Tc , % "x" Tacex
+        GuiControl, Move, Te , % "x" Tacex
+        GuiControl, Move, Tb , % "x" Tbdfx
+        GuiControl, Move, Td , % "x" Tbdfx
+        GuiControl, Move, Tf , % "x" Tbdfx
+        Tacex := (20 - Tacex)/4.5 + Tacex
+        Tbdfx := (11 - Tbdfx)/4.5 + Tbdfx
+
+        Sleep % 4
+    }
+    GuiControl, Enable, Set  All
+    GuiControl, Enable, Don't  LOCK
+    GuiControl, Enable, EXIT
+    GuiControl, Enable, Cancel
+    GuiControl, Enable, OK
+    GuiControl, Enable, DAscent
+    GuiControl, Enable, DSplit
+    GuiControl, Enable, DBind
+    GuiControl, Enable, DIcebox
+    GuiControl, Enable, DHaven
+
+}else{
+
+    Gui, Hide
+
+}
+KeyWait, F5
+Return
 
 
 Setbox:
@@ -489,3 +489,5 @@ Return
 
 ButtonEXIT:
 ExitApp
+
+F7::ExitApp
