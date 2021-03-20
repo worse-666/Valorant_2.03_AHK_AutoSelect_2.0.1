@@ -1,4 +1,4 @@
-# Valorant_AHK_AutoSelect_2.1.1
+# Valorant_AHK_AutoSelect_2.1.2
 
 
 ## Support <br>
@@ -17,6 +17,8 @@ Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9 <br>
 
 ## Changelog <br>
+### AutoSelect_2.1.2: <br>
+* Increase execution speed <br>
 ### AutoSelect_2.1.1: <br>
 * Fix small bug <br>
 ### AutoSelect_2.1.0: <br>
