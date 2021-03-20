@@ -17,5 +17,7 @@ Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9 <br>
 
 ## Changelog <br>
+### AutoSelect_2.1.1: <br>
+* Fix small bug <br>
 ### AutoSelect_2.1.0: <br>
 * Support Astra <br>
