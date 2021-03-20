@@ -17,4 +17,5 @@ Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9 <br>
 
 ## Changelog <br>
-### 2.1.1:Support Astra
+### 2.1.1: <br>
+Support Astra
