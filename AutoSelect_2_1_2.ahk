@@ -5,11 +5,9 @@ SetControlDelay, 0
 SetMouseDelay, 0
 SetWinDelay,-1
 SetBatchLines,-1
-
-
 SysGet, resolution, Monitor, 1
 
-if not (resolutionRight = 1920 and resolutionBottom = 1080) {
+if not (A_ScreenWidth = 1920 and A_ScreenHeight = 1080) {
 
     MsgBox, Your resolution is not 1920*1080 `n This script may not work
 
