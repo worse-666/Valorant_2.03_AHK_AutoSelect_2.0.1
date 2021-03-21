@@ -19,6 +19,7 @@ Resolution : 1920 x 1080 16:9 <br>
 ## Changelog <br>
 ### AutoSelect_2.1.2: <br>
 * Increase execution speed <br>
+* Increase safety <br>
 ### AutoSelect_2.1.1: <br>
 * Fix small bug <br>
 ### AutoSelect_2.1.0: <br>
