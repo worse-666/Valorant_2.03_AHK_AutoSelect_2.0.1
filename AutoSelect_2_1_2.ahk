@@ -119,7 +119,7 @@ select() {
             CoordMode Pixel
             PixelSearch, __FoundX, __FoundY, 1, 100, 1, 100, 0x7095E1,3,Fast RGB
             CoordMode Mouse
-            if (ErrorLevel=0 and not agent_x = 959 and not agent_y = 816 ) { 
+            if (ErrorLevel=0 and WinActive("VALORANT") and not agent_x = 959 and not agent_y = 816 ) { 
               
                 Loop 4
                 {
