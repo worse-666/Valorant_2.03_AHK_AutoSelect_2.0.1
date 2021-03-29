@@ -1,4 +1,4 @@
-# Valorant_AHK_AutoSelect_2.1.2
+# VALORANT_AHK_AutoSelect_2.1.2
 
 
 ## Support <br>
