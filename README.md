@@ -17,6 +17,9 @@ Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9 <br>
 
 ## Changelog <br>
+### AutoSelect_2.2.0: <br>
+* Add Breeze map <br>
+* Change font <br>
 ### AutoSelect_2.1.2: <br>
 * Increase execution speed <br>
 * Increase safety <br>
