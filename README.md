@@ -1,5 +1,7 @@
-# VALORANT_AHK_AutoSelect_2.1.2
+# VALORANT_AHK_AutoSelect
 
+## Download
+AutoSelect_2_1_2.ahk
 
 ## Support <br>
 Resolution : 1920*1080 <br>
