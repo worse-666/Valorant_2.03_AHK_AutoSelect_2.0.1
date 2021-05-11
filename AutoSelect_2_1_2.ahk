@@ -307,7 +307,7 @@ Gui, Font, s10 cDDDDDD
 Gui, Add, CheckBox, x20 y80  vSSS gSetbox , Set  All
 Gui, Add, CheckBox, x20 y105 vLLL gLockbox, Don't  LOCK🔒
 Gui, Font, s9 c50B050
-Gui, Add, Text, x110 y322 , Ver.2.2.0
+Gui, Add, Text, x110 y322 , Ver.2.1.2
 
 Gui, +AlwaysOnTop
 Gui, Color, 101010 
