@@ -1,4 +1,4 @@
-﻿#NoEnv
+#NoEnv
 #SingleInstance, Force
 CoordMode, Mouse , Screen
 SetKeyDelay,-1, 1
