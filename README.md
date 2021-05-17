@@ -16,6 +16,9 @@ video : All LOW <br>
 Display Mode : Windowed Fullscreen <br>
 Resolution : 1920 x 1080 16:9 <br>
 
+## GUI <br>
+![image](https://github.com/worse-666/images/blob/main/AutoSelect_2_2_0%20GUI.png) <br>
+
 ## Changelog <br>
 ### AutoSelect_2.2.0: <br>
 * Add Breeze map <br>
