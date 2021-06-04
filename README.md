@@ -1,4 +1,4 @@
- vanguard blocked so the script doesn't work anymore <br>
+# vanguard blocked so the script doesn't work anymore <br>
 
 ## Download
 [AutoSelect_2_2_0.ahk](https://github.com/worse-666/VALORANT_AHK_AutoSelect/releases/download/AutoSelect/AutoSelect_2_2_0.ahk)
